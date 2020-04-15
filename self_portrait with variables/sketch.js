@@ -10,10 +10,6 @@ function setup() {
 
 function draw() {
 	background ('brown');
-    /*
-    fill('white');
-	text('self portrait', 50, 30);
-	*/
     fill('black');
 	triangle(320, 180, 120, 340, 500, 340);
 	triangle(90, 80, 20, 200, 220, 200);

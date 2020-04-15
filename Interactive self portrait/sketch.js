@@ -2,10 +2,17 @@
 /*
 any note i want to make
 */
+// global vaviable
+  var s =0;
+  var startAnimation =false;
 
 function setup() {
 	createCanvas (640,360);
 }
+
+  function mousePressed() {
+    startAnimation =true;
+  }
 
 function draw() {
 	background ('brown');
@@ -13,8 +20,10 @@ function draw() {
 // using frameCount as the ellipse size
 	var x = width / 2;
 	var y = height / 2;
-	var s = frameCount; // size
-	
+	 // size
+	if (startAnimation) {
+		s++;
+	}
 	
     fill('green');
 	ellipse(x, y, s);

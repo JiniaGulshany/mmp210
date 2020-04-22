@@ -2,29 +2,26 @@
 /*
 any note i want to make
 */
-
+/*
 function setup() {
 	createCanvas (800,450);
 }
-
+function image()
 function draw() {
 	background ('brown');
+}
 
-// using frameCount as the ellipse size
-	var x = width / 2;
-	var y = height / 2;
-	var s = frameCount; // size
-	
-	
-    fill('green');
-	ellipse(x, y, s);
+*/
+var img;
 
+function preload() {
+	img = loadImage("MEME.jpg");
+}
 
+function setup() {
+    createCanvas(640, 480);
+}
 
-    /*
-    fill('white');
-	text('self portrait', 50, 30);
-	*/
-    image 
-
-	}
+function draw(){
+	image(img, 0, 0);
+}

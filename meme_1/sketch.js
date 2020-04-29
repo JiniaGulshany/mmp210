@@ -2,21 +2,12 @@
 /*
 any note i want to make
 */
-/*
-function setup() {
-	createCanvas (800,450);
-}
-function image()
-function draw() {
-	background ('brown');
-}
 
-*/
 
 var img;
 
 function preload() {
-	img = loadImage("MEME.jpg");
+	img = loadImage("MEME2.jpg");
 }
 
 function setup() {
@@ -25,5 +16,10 @@ function setup() {
 }
 
 function draw(){
-	image(img, 0, 0);
+	image(img, 0, 0, width);
+	textSize(60);
+	fill('lightblue');
+	stroke('black');
+	strokeWeight(2);
+	text("When people get offended over a meme, I'm over here like..".toUpperCase(), 10, 50, width);
 }

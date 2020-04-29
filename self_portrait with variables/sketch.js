@@ -14,6 +14,7 @@ function draw() {
     //mouth
     var x =320;
     var y =180;
+    var s =70;
 
   /* x = mouseX; 
 */ 
@@ -21,10 +22,10 @@ function draw() {
 	triangle(x-230, y-100, x-300, y+20, x-100, y+20);
 	triangle(x+240, y-100, x+100, y+20, x+300, y+20);
 	fill('orange');
-	circle(x-205, y-15, 70);
-	circle(x+210, y-15, 70);
+	circle(x-205, y-15, s);
+	circle(x+210, y-15, s);
     fill('pink'); //tongue
 
-    rect(x-80, y+70, x-160, y-100, 40);
+    rect(x-80, y+70, s*2, s, 40);
 
 }

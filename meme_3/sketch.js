@@ -5,6 +5,8 @@ any note i want to make
 
 
 var img;
+var r = 0;
+var c = 1; // change
 
 function preload() {
 	img = loadImage("MEME2.jpg");
@@ -15,6 +17,15 @@ function setup() {
 }
 
 function draw() {
+	background(0);
+	fill(r, 0, 100);
+	noStroke();
+	rect(0, 0, 640, 480);
+	r += c;
+	if (r > 255 || r < 0) {
+		c *= -1;
+	}
+
 	textSize(60);
 	fill('lightblue');
 	stroke('black');
@@ -25,10 +36,5 @@ function draw() {
 		image(img, 0, 0, width);
 	}
 	
-	/*
-	textSize(20);
-	fill(255);
-	text('mouseIsPressed = ' + mouseIsPressed, 20, 40);
-*/
 
 }

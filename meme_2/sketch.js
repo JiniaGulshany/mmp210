@@ -15,6 +15,7 @@ function setup() {
 }
 
 function draw() {
+	background(0);
 	textSize(60);
 	fill('lightblue');
 	stroke('black');
@@ -24,7 +25,7 @@ function draw() {
 	if (mouseIsPressed) {
 		image(img, 0, 0, width);
 	}
-	
+
 	/*
 	textSize(20);
 	fill(255);

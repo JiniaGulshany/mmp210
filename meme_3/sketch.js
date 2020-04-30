@@ -1,12 +1,18 @@
 
 /*
-any note i want to make
+meme 3 animation
 */
 
 
 var img;
 var r = 0;
 var c = 1; // change
+//image animation perimeter
+
+var y = 40;
+var minY = y - 20;
+var maxY = y + 20;
+var ySpeed = 1;
 
 function preload() {
 	img = loadImage("MEME2.jpg");
@@ -18,7 +24,8 @@ function setup() {
 
 function draw() {
 	background(0);
-	fill(r, 0, 100);
+	//backgound color animation
+	fill(r, 0, 100); 
 	noStroke();
 	rect(0, 0, 640, 480);
 	r += c;
@@ -32,8 +39,14 @@ function draw() {
 	strokeWeight(2);
 	text("When people get offended over a meme, I'm over here like..".toUpperCase(), 10, 50, width);
 
+    //when mouse pressed, animation starts
 	if (mouseIsPressed) {
-		image(img, 0, 0, width);
+		image(img, 0, y, width);
+		y += ySpeed;
+
+		if (y > maxY || y < minY) {
+			ySpeed *= -1; 
+		}
 	}
 	
 

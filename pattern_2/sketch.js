@@ -4,19 +4,21 @@
 var angleSlider;
 
 function setup() {
-	createCanvas(640, 360);
+	var canvas = createCanvas(640, 360);
+	canvas.parent("sketch");
 	noStroke();
 
-
-	angleSlider = createSlider(0, TWO_PI); //slider
+	angleSlider = createSlider(0, TWO_PI, 0, TWO_PI/360); //slider
 	angleSlider.input(pattern);
-
+	angleSlider.parent("sketch");
 
 	var patternButton = createButton('New Pattern');
 	patternButton.mousePressed(pattern);
+	patternButton.parent("sketch");
 
 	var saveButton = createButton('Save Image');
 	saveButton.mousePressed(saveImage);
+	saveButton.parent("sketch");
 
 	pattern();
 }
@@ -28,11 +30,11 @@ function saveImage() {
 function pattern() {
 	background('green');
 
-	for (let x = 20; x <= width; x += 100) {
+	for (let x = 20; x <= width; x += 150) {
 
-		let s = random(40, 80); // to change the size
+		let s = random(60, 80); // to change the size
 
-		let y = random(s/2, height - s/2); // to change the height
+		let y = x/2; // to change the height
 
 // fried eggs
 
@@ -42,10 +44,10 @@ function pattern() {
 		for (let i = 0; i<6; i++) {
 
 			push();
-			translate(x, height/16);
+			translate(x, y);
 			rotate(angleSlider.value() * PI);
 
-			ellipse(x + random(-45, 45), y + random(-45, 45), s + random(50));
+			ellipse(random(40), random(20), s + random(50));
 			pop();
 		}
 

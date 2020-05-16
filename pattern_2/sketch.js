@@ -1,4 +1,5 @@
-/*pattern version 2*/
+/*updated pattern version 2
+DOM*/
 
 // Interface
 var angleSlider;
@@ -8,7 +9,7 @@ function setup() {
 	canvas.parent("sketch");
 	noStroke();
 
-	angleSlider = createSlider(0, TWO_PI, 0, TWO_PI/360); //slider
+	angleSlider = createSlider(0, TWO_PI, 0, TWO_PI / 360); //slider
 	angleSlider.input(pattern);
 	angleSlider.parent("sketch");
 
@@ -54,4 +55,6 @@ function pattern() {
 		fill('yellow'); // yolk
 		ellipse(x,y,s);
 	}
+	textSize(30);
+	text(angleSlider.value(), 10, 30);
 }

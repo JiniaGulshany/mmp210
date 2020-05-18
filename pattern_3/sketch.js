@@ -1,5 +1,5 @@
-/*updated pattern version 2
-DOM*/
+/*updated pattern version 
+Generating Patterns*/
 
 // Interface
 var angleSlider;

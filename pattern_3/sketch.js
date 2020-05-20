@@ -41,8 +41,9 @@ function pattern() {
 
 	var w = 100;
 	var h = w;
-
-	for (let x =0; x <= width; x += w) {
+	
+// for pattern 
+	for (let x =0; x <= width; x += w) {  
 		for (let y = 0; y <= height; y += h) {
 
 		fill(255); // for egg white

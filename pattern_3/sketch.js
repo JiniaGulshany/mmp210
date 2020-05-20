@@ -39,6 +39,11 @@ function pattern() {
 
 // fried eggs
 
+	var w = 100;
+	var h = w;
+
+	for (let x =0; x <= width; x += w) {
+		for (let y = 0; y <= height; y += h) {
 
 		fill(255); // for egg white
 
@@ -48,12 +53,20 @@ function pattern() {
 			translate(x, y);
 			rotate(angleSlider.value() * PI);
 
-			ellipse(random(40), random(20), s + random(50));
+			ellipse(random(10), random(10), s + random(40));
 			pop();
 		}
 
 		fill('yellow'); // yolk
 		ellipse(x,y,s);
 	}
-	
+
+	}
 }
+
+}
+
+
+
+
+	

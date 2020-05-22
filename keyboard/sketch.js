@@ -3,8 +3,8 @@
 var cookingSound, pianoSound;
 
 function preload() {
-	cookingSound = loadSound("cooking.wav");
-	pianoSound = loadSound("piano.wav");
+	cookingSound = loadSound("cooking.wav"); //used J key
+	pianoSound = loadSound("piano.wav");  // used G key
 }
 
 

@@ -31,24 +31,20 @@ function saveImage() {
 function pattern() {
 	background('green');
 
-	for (let x = 20; x <= width; x += 150) {
-
-		let s = random(60, 80); // to change the size
-
-		let y = x/2; // to change the height
 
 // fried eggs
 
 	var w = 100;
 	var h = w;
-	
+
 // for pattern 
 	for (let x =0; x <= width; x += w) {  
 		for (let y = 0; y <= height; y += h) {
 
 		fill(255); // for egg white
-
+			let s = random(60, 80); // to change the size
 		for (let i = 0; i<6; i++) {
+
 
 			push();
 			translate(x, y);
@@ -63,7 +59,7 @@ function pattern() {
 	}
 
 	}
-}
+
 
 }
 

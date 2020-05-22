@@ -7,7 +7,6 @@ function preload() {
 	pianoSound = loadSound("piano.wav");  // used G key
 }
 
-
 function setup() {
 	createCanvas(640, 360);
 	noStroke();
@@ -18,19 +17,29 @@ function keyPressed(){ // to add sound
 
 	if (keyCode == 74) {  //key J
 		cookingSound.play();
+
+		fill('lightblue');
+		ellipse(x + random(-45, 45), y + random(-45, 45), s + random(10));
+		x += random(-5,5);
+		y += random(-5,5);
 	}
+
 	if (keyCode == 71) {  //key G
 		pianoSound.play();
 	}
 
 }
 
-function mousePressed() {  // to change the eggs pattern
-	pattern();
+function mousePressed() {    // to change the eggs pattern
+		
+
+		pattern();
 }
+
 
 function pattern() {
 	background('green');
+
 
 	for (let x = 100; x <= width; x += 150) {
 		let s = random(40, 80); // to change the size
@@ -43,7 +52,9 @@ function pattern() {
 		for (let i = 0; i<6; i++) {
 			ellipse(x + random(-45, 45), y + random(-45, 45), s + random(50));
 		}
+
 		fill('yellow'); // yolk
 		ellipse(x,y,s);
+		
 	}
 }

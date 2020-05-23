@@ -51,6 +51,7 @@ function pattern() {
 		
 	}
 }
+// for oil
 function draw() {
  
  	if (cookingSound.isPlaying()) {

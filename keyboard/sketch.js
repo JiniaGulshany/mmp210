@@ -17,11 +17,6 @@ function keyPressed(){ // to add sound
 
 	if (keyCode == 74) {  //key J
 		cookingSound.play();
-
-		fill('lightblue');
-		ellipse(x + random(-45, 45), y + random(-45, 45), s + random(10));
-		x += random(-5,5);
-		y += random(-5,5);
 	}
 
 	if (keyCode == 71) {  //key G
@@ -31,8 +26,6 @@ function keyPressed(){ // to add sound
 }
 
 function mousePressed() {    // to change the eggs pattern
-		
-
 		pattern();
 }
 
@@ -57,4 +50,14 @@ function pattern() {
 		ellipse(x,y,s);
 		
 	}
+}
+function draw() {
+ 
+ 	if (cookingSound.isPlaying()) {
+
+    fill(255, 255, 255, 127);
+    ellipse(random(width), random(height), random(5, 20));
+
+  }
+
 }
